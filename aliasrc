@@ -1,29 +1,66 @@
 #!/bin/bash
-alias add="sudo pacman -S"
-alias rmv="sudo pacman -Rns"
-alias upd="sudo pacman -Syu"
-alias yt="youtube-dl --add-metadata -i"
-alias yta="youtube-dl -x -f bestaudio/best"
-alias ka="killall"
-alias sdn="shutdown now"
-alias rbn="reboot"
-alias untar="tar -zxvf"
-alias myip="curl ipinfo.io/ip"
-alias dez="cd  ~/TEST/deemix-pyweb && python3 server.py | brave http://127.0.0.1:6595 "
-alias cp="cp -iv"
-alias mv="mv -iv"
-alias rm="rm -v"
-alias mkd="mkdir -pv"
-alias v="nvim"
-alias sv="sudo nvim"
-alias sss="sudo systemctl start"
-alias sse="sudo systemctl enable"
-alias ssd="sudo systemctl disable"
-alias lspkgs="sudo pacman -Q | v pkgs"
-alias als="v .config/aliasrc"
-alias alk="source .bashrc"
-alias cl="clear"
-alias lm="ls -t -1"
-alias lt="ls --human-readable --size -1 -S --classify"
-alias cnv="ffmpeg -i"
-alias g="git clone"
+
+# Based
+alias alk='source /home/gurur/.bashrc'
+alias als='v /home/gurur/.config/aliasrc'
+alias sv='sudo vim'
+alias v='vim'
+
+# Edits vimrc
+alias vvrc="vim ~/.vimrc"
+
+# Edits bashrc
+alias esh="vim ~/.bashrc"
+
+# Goes into my projects folders and lists directory
+alias pro="cd ~/Projects && ls"
+
+# Goes into my Python folder in the Projects folder and lists directory
+alias prol="cd ~/Projects/Learning/Python && ls"
+
+# Sets the ping command to only ping thrice
+alias ping='ping -c 3'
+
+# Edits xinitrc
+alias svex='sudo vim /etc/X11/xinit/xinitrc'
+
+# Pacman commands
+alias add='sudo pacman -S'
+alias rmv='sudo pacman -Rns'
+alias lspkgs='sudo pacman -Q | less' 
+alias upd='sudo pacman -Syu'
+
+# Systemctl commands
+alias ssd='sudo systemctl disable'
+alias sse='sudo systemctl enable'
+alias sss='sudo systemctl start'
+
+# Youtube-dl commands
+alias yt='youtube-dl --add-metadata -i'
+alias yta='youtube-dl -x -f bestaudio/best'
+
+# General
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias cl='clear'
+alias cnv='ffmpeg -i'
+alias cp='cp -iv'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias g='git clone'
+alias grep='grep --color=auto'
+alias ka='killall'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias lm='ls -t -1'
+alias ls='ls --color=auto'
+alias lt='ls --human-readable --size -1 -S --classify'
+alias mkd='mkdir -pv'
+alias mv='mv -iv'
+alias myip='curl ipinfo.io/ip'
+alias rbn='reboot'
+alias rm='rm -v'
+alias sdn='shutdown now'
+alias untar='tar -zxvf'
+
+
